@@ -1,27 +1,229 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-    <meta charset="UTF-8">
-    <title>This is Tarique's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <title>Tarique Anwar Mulla | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    details {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      padding: 15px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1em;
+      color: #00ffff;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    h2:hover, h3:hover, .title h1:hover {
+      text-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;
+      transition: text-shadow 0.3s ease;
+    }
+    a:hover, button:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+    }
+    #themeToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #222;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 99;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+    body.light-mode .stars,
+    body.light-mode .twinkling,
+    body.light-mode .clouds {
+      display: none;
+    }
+    body.light-mode .title h1,
+    body.light-mode h2,
+    body.light-mode h3,
+    body.light-mode p,
+    body.light-mode a {
+      color: #111 !important;
+      text-shadow: none;
+    }
+
+
+    body.light-mode summary,
+    body.light-mode details ul li,
+    body.light-mode .project-card strong {
+    color: #111 !important;
+    }
+
+    body.light-mode .project-card,
+    body.light-mode section,
+    body.light-mode details {
+      background-color: rgba(0, 0, 0, 0.04);
+      border-color: rgba(0, 0, 0, 0.15);
+
+
+    }
+  </style>
 </head>
 
+<script>
+  var typed = new Typed('#typed-output', {
+    strings: ["Software Engineer", "BLE Systems Dev", "QA/SDET", "AI Tinkerer"],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+  });
+</script>
+
 <body>
+  <!-- Background Layers -->
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds"></div>
 
-    <div class="stars"></div>
-    <div class="twinkling"></div> 
-   <div class="clouds"></div>
+  <div class="content">
+    <header class="title" data-aos="fade-down" data-aos-delay="100">
+      <h1>Tarique Anwar Mulla</h1>
+      <span id="typed-output" style="color:#00e0ff;font-weight:bold;"></span>
+      <p>Software Engineer | SDET | BLE Systems & AI Projects</p>
+    </header>
 
+    <section id="about" data-aos="fade-up" data-aos-delay="200">
+      <h2>About Me</h2>
+      <p>
+        I'm a versatile engineer with a background in QA and a sharp focus on building modern, real-world tech solutions. My recent work includes smart prosthetics with BLE, full-stack applications, and AI-enhanced automation tools. I thrive on learning fast, optimizing systems, and creating software that blends performance with creativity.
+      </p>
+      <p>
+        Whether it’s crafting cloud-integrated APIs or designing mobile interfaces, I combine my curiosity, discipline, and space-core aesthetic to build memorable user experiences. Currently pursuing my Master’s in Electrical Engineering, I'm evolving rapidly toward backend and embedded systems roles.
+      </p>
+    </section>
 
-   <div class="title">
+    <section id="experience" data-aos="fade-up" data-aos-delay="300">
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <h3>R&D Software Engineering Intern — RockyTech (Jan 2025 – May 2025)</h3>
+        <ul>
+          <li>Engineered a BLE-integrated React Native app enabling real-time thermal regulation in prosthetic limbs using ESP32 microcontrollers and dual-mode operation (manual/automated).</li>
+          <li>Designed and implemented background scanning logic, temperature thresholding, Notifee push notifications, and OTA safety protocols across mobile and embedded systems.</li>
+          <li>Led user onboarding UI/UX redesign using React Native Paper, and established mobile-to-cloud connectivity for real-time monitoring.</li>
+          <li>Deployed builds on TestFlight, created documentation for iOS bundling, firmware pairing, and system architecture, contributing to patent application workflow.</li>
+          <li>Redesigned the company’s WordPress site using Elementor and improved responsiveness across desktop and mobile screens.</li>
+        </ul>
+      </div>
 
-<h1>This is a portfolio website of Tarique Anwar Mulla</h1>
-</div>
+      <div class="job">
+        <h3>QA Engineer / SDET — Cybage Software (Nov 2020 – Aug 2023)</h3>
+        <ul>
+          <li>Worked on Amadeus Hospitality projects (iHotelier CRS, GDS, Meta Channels) delivering regression and automation test coverage for booking engines and third-party integrations.</li>
+          <li>Designed scalable Selenium (Java) test frameworks and API test suites using Postman, ReadyAPI, and SoapUI — achieving over 80% automated regression coverage.</li>
+          <li>Owned QA strategy including writing test plans, authoring test cases in Rally, logging defects in JIRA, and driving QA cycles across Agile sprints.</li>
+          <li>Led internal QA sessions, mentored 5-member team in absence of lead, and represented QA in client sync-ups and release planning.</li>
+          <li>Reduced production defects by 95% while maintaining CI quality gates using Jenkins and Git-managed automation suites.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up" data-aos-delay="400">
+      <h2>Projects</h2>
+      <details>
+        <summary>Click to view project list</summary>
+        <div class="project-card">
+          <strong>RESTler Enhancement for Swagger Generation</strong><br>
+          LLM-powered automation of API documentation using LLaMA 3 — reduced manual documentation time by 70%.
+        </div>
+        <div class="project-card">
+          <strong>Voice-to-Face AI Reconstruction</strong><br>
+          Deep learning project using CNN-RNN models to reconstruct facial features from voice spectrograms.
+        </div>
+        <div class="project-card">
+          <strong>Sleep Quality Prediction System</strong><br>
+          End-to-end ML system with REST API + React frontend predicting sleep quality based on multiple input metrics.
+        </div>
+        <div class="project-card">
+          <strong>Video to MP3 Converter</strong><br>
+          Modular Flask backend with JWT + RabbitMQ + MongoDB, deployed with Kubernetes.
+        </div>
+        <div class="project-card">
+          <strong>Agro CO₂ Emissions Analysis</strong><br>
+          Python data pipeline visualizing North American climate impact with Seaborn and Snakemake.
+        </div>
+      </details>
+    </section>
+
+    <section id="certifications" data-aos="fade-up" data-aos-delay="500">
+      <h2>Certifications</h2>
+      <details>
+        <summary>Click to view certifications</summary>
+        <ul>
+          <li><strong>AWS Certified Cloud Practitioner</strong> — Credential ID: 7495500b990546b2a62c7c9e9cb82af2</li>
+          <li><strong>Planned:</strong> AWS Solutions Architect – Associate (Scheduled July 19, 2025)</li>
+          <li><strong>Planned:</strong> ISTQB Foundation Level (Scheduled July 25, 2025)</li>
+          <li><strong>Planned:</strong> Java SE 8 Programmer I (Oracle Certified)</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="contact" data-aos="fade-up" data-aos-delay="600">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:tariquemulla14@gmail.com">tariquemulla14@gmail.com</a></p>
+      <p>Phone: <a href="tel:+13035223696">+1 (303) 522-3696</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/tarique-anwar-mulla" target="_blank">linkedin.com/in/tarique-anwar-mulla</a></p>
+      <p>GitHub: <a href="https://github.com/tazam777" target="_blank">github.com/tazam777</a></p>
+      <p>
+        Visitors:  
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=tazam777.portfolioWebsite&left_color=blue&right_color=purple" alt="visitor badge">
+      </p>
+    </section>
+  </div>
+
+  <button id="themeToggle">🌙</button>
+
+  <!-- AOS Animation Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true
+    });
+
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    });
+  </script>
 </body>
-
-
 </html>
