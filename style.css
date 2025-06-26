@@ -10,22 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Cursor Sword Theme 
-@media (hover: hover) and (pointer: fine) {
-  body {
-    cursor: url("assets/sword.png") 16 16, auto;
-  }
-}
-a, button, summary, details, input[type="submit"], input[type="button"] {
-  cursor: url("assets/sword-cursor.png") 16 16, auto !important;
-}
-details *, summary * {
-  cursor: url("assets/sword.png") 16 16, auto !important;
-}
-summary:hover {
-  cursor: url("assets/sword.png") 16 16, auto !important;
-} 
-*/
+
 
 /* Background Animation Keyframes */
 @keyframes move-twink-back {
@@ -286,7 +271,15 @@ body.light-mode details {
   border: none;
   padding: 10px 14px;
   border-radius: 8px;
+  font-size: 18px;
   cursor: pointer;
   z-index: 99;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
 }
+
+#themeToggle:hover {
+  background: #444;
+}
+
 
