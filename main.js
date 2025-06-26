@@ -1,5 +1,5 @@
-// Modular HTML Loader
 const includes = [
+    { id: "navbar-section", file: "navbar.html" },
     { id: "header-section", file: "header.html" },
     { id: "about-section", file: "about.html" },
     { id: "experience-section", file: "experience.html" },
@@ -9,22 +9,23 @@ const includes = [
     { id: "contact-section", file: "contact.html" }
   ];
   
-  // Load each HTML fragment into its placeholder div
-  includes.forEach(section => {
-    fetch(section.file)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById(section.id).innerHTML = html;
-      });
-  });
-  
-  // Wait for all content to load
-  window.addEventListener("load", () => {
-    // Remove loader (if you use one)
-    const loader = document.getElementById("loader");
-    if (loader) loader.style.display = "none";
-  
-    // Re-initialize AOS after dynamic load
+  // Load all fragments first
+  Promise.all(
+    includes.map(({ id, file }) =>
+      fetch(file)
+        .then((res) => {
+          if (!res.ok) throw new Error(`Failed to load ${file}`);
+          return res.text();
+        })
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        })
+        .catch((err) => {
+          console.error(err);
+        })
+    )
+  ).then(() => {
+    // Init AOS after all content is injected
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -32,9 +33,10 @@ const includes = [
       mirror: true
     });
   
-    // Typed.js animation (header text)
-    if (document.querySelector("#typed-output")) {
-      new Typed("#typed-output", {
+    // Initialize Typed.js only if target exists
+    const typedTarget = document.querySelector("#typed-output");
+    if (typedTarget) {
+      new Typed(typedTarget, {
         strings: [
           "Software Engineer",
           "SDET",
@@ -49,10 +51,14 @@ const includes = [
     }
   });
   
-  // Dark/Light mode toggle
-  const toggleBtn = document.getElementById('themeToggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  // Theme toggle
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("themeToggle");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", () => {
+        const isLight = document.body.classList.toggle("light-mode");
+        toggleBtn.textContent = isLight ? "☀️" : "🌙";
+      });
+    }
   });
   

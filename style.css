@@ -291,6 +291,47 @@ body.light-mode details {
   margin-top: 10px;
   min-height: 24px; /* ensures space stays during typing */
 }
+/* Navbar Styling (Universal) */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 12px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
 
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0;
+}
 
+.navbar li a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
 
+.navbar li a:hover {
+  color: white;
+}
+
+/* Light Mode Navbar Text */
+body.light-mode .navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.light-mode .navbar li a {
+  color: #111;
+}
+
+body.light-mode .navbar li a:hover {
+  color: #333;
+}
