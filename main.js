@@ -17,9 +17,15 @@ const includes = [
           if (!res.ok) throw new Error(`Failed to load ${file}`);
           return res.text();
         })
-        .then((html) => {
-          document.getElementById(id).innerHTML = html;
-        })
+       .then((html) => {
+  const target = document.getElementById(id);
+  if (target) {
+    target.innerHTML = html;
+  } else {
+    console.warn(`⚠️ Element with ID #${id} not found in index.html`);
+  }
+})
+
         .catch((err) => {
           console.error(err);
         })
