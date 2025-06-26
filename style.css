@@ -335,3 +335,22 @@ body.light-mode .navbar li a {
 body.light-mode .navbar li a:hover {
   color: #333;
 }
+
+
+
+
+.tags {
+  margin-top: 10px;
+}
+.tags span {
+  display: inline-block;
+  background-color: #00e0ff20;
+  color: #00e0ff;
+  border: 1px solid #00e0ff50;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.8em;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
