@@ -204,6 +204,8 @@ body.light-mode .twinkling,
 body.light-mode .clouds {
   display: none !important;
 }
+
+/*
 body.light-mode::before {
   content: "";
   position: fixed;
@@ -214,6 +216,9 @@ body.light-mode::before {
   opacity: 0.25;
   pointer-events: none;
 }
+*/
+
+
 body.light-mode .title h1,
 body.light-mode h2,
 body.light-mode h3,
@@ -354,3 +359,33 @@ body.light-mode .navbar li a:hover {
   margin-bottom: 4px;
 }
 
+/* Day Mode Sky Background */
+#sky-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#e0f7ff, #b3d8ff);
+ overflow: hidden;
+  z-index: -2;
+}
+
+.sky-hidden {
+  display: none;
+}
+
+.cloud {
+  position: absolute;
+  top: 100vh;
+  animation: moveUp 80s linear infinite;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200vh);
+  }
+}
