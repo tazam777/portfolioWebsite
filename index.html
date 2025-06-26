@@ -4,23 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-
   <title>Tarique Anwar Mulla | Portfolio</title>
-  
+
   <!-- Fonts and CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Libraries -->
-<script src="assets/typed.min.js"></script>
+  <!-- AOS Animation Library -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
-  <!-- Smooth Scroll -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 
 <body>
@@ -29,17 +20,8 @@
   <div class="twinkling"></div>
   <div class="clouds"></div>
 
-  <!-- Sticky Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about-section">About</a></li>
-      <li><a href="#experience-section">Experience</a></li>
-      <li><a href="#projects-section">Projects</a></li>
-      <li><a href="#certifications-section">Certifications</a></li>
-      <li><a href="#patents-section">Patents</a></li>
-      <li><a href="#contact-section">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Injected Navbar -->
+  <div id="navbar-section"></div>
 
   <!-- Main Content -->
   <div class="content">
@@ -55,10 +37,9 @@
   <!-- Theme Toggle Button -->
   <button id="themeToggle">🌙</button>
 
-  <!-- AOS Animation Library -->
+  <!-- JS Libraries -->
+  <script src="assets/typed.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- Your Main JS -->
   <script src="main.js"></script>
 </body>
 </html>
