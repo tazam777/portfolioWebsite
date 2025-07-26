@@ -1,0 +1,29 @@
+/* Details & Summary (Collapsible Sections) */
+details {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #00ffff;
+    outline: none;
+  }
+  
+  /* Light Mode Overrides for Details */
+  body.light-mode summary,
+  body.light-mode details ul li,
+  body.light-mode .project-card strong {
+    color: #111 !important;
+  }
+  
+  body.light-mode details {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+  

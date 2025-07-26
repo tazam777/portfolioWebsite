@@ -1,0 +1,24 @@
+/* === Core Reset & Base === */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./layout.css');
+
+/* === Components === */
+@import url('./components/animations.css');
+@import url('./components/hero.css');
+@import url('./components/sections.css');
+@import url('./components/cards.css');
+@import url('./components/navbar.css');
+@import url('./components/toggle-button.css');
+@import url('./components/details.css');
+@import url('./components/contacts.css');
+/* === Themes === */
+@import url('./themes/dark.css');
+@import url('./themes/light.css');
+
+/* === Responsive === */
+@import url('./responsive.css');
+
+
+
+

@@ -4,63 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-
   <title>Tarique Anwar Mulla | Portfolio</title>
-  
-  <!-- Fonts and CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/index.css"> 
+  
 
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
-  <!-- Smooth Scroll -->
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
+    html { scroll-behavior: smooth; }
 
+    body.main-visible { overflow: auto; }
+    .hidden { display: none !important; }
+  </style>
+  
+</head>
 <body>
+
+  <button id="themeToggle" style="position:fixed;bottom:20px;right:20px;z-index:20001;">🌙</button>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>TARIQUE ANWAR MULLA</h1>
+      <hr>
+      <div class="subtitle">QA ENGINEER | SOFTWARE ENGINEER | AI ENTHUSIAST</div>
+      <a href="#" class="learn-more">
+        LEARN MORE <span class="down-arrow">&#8595;</span>
+      </a>
+    </div>
+  </div>
+
+<!-- Add right after the hero-banner -->
+<div style="height: 200px;"></div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <nav class="navbar">
+      <button id="menuToggle" class="hamburger">☰</button>
+    
+      <ul class="nav-links">
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#experience-section">Experience</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#certifications-section">Certifications</a></li>
+        <li><a href="#patents-section">Patents</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div id="header-section"></div>
+      <div id="about-section"></div>
+      <div id="experience-section"></div>
+      <div id="projects-section"></div>
+      <div id="certifications-section"></div>
+      <div id="patents-section"></div>
+      <div id="contact-section"></div>
+    </div>
+  </div>
+
   <!-- Background Layers -->
   <div class="stars"></div>
   <div class="twinkling"></div>
   <div class="clouds"></div>
   <div id="sky-container" class="sky-hidden"></div>
 
-
-  <!-- Sticky Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about-section">About</a></li>
-      <li><a href="#experience-section">Experience</a></li>
-      <li><a href="#projects-section">Projects</a></li>
-      <li><a href="#certifications-section">Certifications</a></li>
-      <li><a href="#patents-section">Patents</a></li>
-      <li><a href="#contact-section">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="content">
-    <div id="header-section"></div>
-    <div id="about-section"></div>
-    <div id="experience-section"></div>
-    <div id="projects-section"></div>
-    <div id="certifications-section"></div>
-    <div id="patents-section"></div>
-    <div id="contact-section"></div>
-  </div>
-
-  <!-- Theme Toggle Button -->
-  <button id="themeToggle">🌙</button>
-
-  <!-- AOS Animation Library -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  <!-- Your Main JS -->
   <script src="main.js"></script>
+
 </body>
 </html>

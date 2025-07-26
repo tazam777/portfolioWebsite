@@ -1,0 +1,46 @@
+/* Section Styling */
+section {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ff66cc;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 5px;
+  }
+  
+  section h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #33ffff;
+  }
+  
+  section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+  
+  section ul li {
+    margin-bottom: 12px;
+  }
+  
+  /* Neon Hover Effects */
+  h2:hover, h3:hover, .title h1:hover {
+    text-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;
+    transition: text-shadow 0.3s ease;
+  }
+  
