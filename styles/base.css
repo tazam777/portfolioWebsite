@@ -1,0 +1,33 @@
+/* Base Typography & Body */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: black;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  
+  p, li {
+    font-size: 1em;
+    color: #cccccc;
+  }
+  
+  a {
+    color: #33ccff;
+    text-decoration: underline;
+    word-break: break-word;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #66e0ff;
+  }
+  
+  .typed-center {
+    text-align: center;
+    color: #00e0ff;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+    min-height: 24px;
+  }
+  

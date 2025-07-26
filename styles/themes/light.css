@@ -1,0 +1,92 @@
+/* === Light Mode Theme (light.css) === */
+
+@keyframes move-clouds-back {
+    from { background-position: 0 0; }
+    to { background-position: 10000px 0; }
+  }
+  
+  body.light-mode {
+    background-color: #f0f0f0;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body.light-mode .stars,
+  body.light-mode .twinkling,
+  body.light-mode .clouds {
+    display: none !important;
+  }
+  
+  body.light-mode .title h1,
+  body.light-mode h2,
+  body.light-mode h3,
+  body.light-mode p,
+  body.light-mode a,
+  body.light-mode li,
+  body.light-mode span,
+  body.light-mode summary,
+  body.light-mode details ul li,
+  body.light-mode .project-card strong {
+    color: #111 !important;
+    text-shadow: none !important;
+  }
+  
+  body.light-mode .project-card,
+  body.light-mode section,
+  body.light-mode details {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+  
+  body.light-mode .navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  body.light-mode .navbar li a {
+    color: #111;
+  }
+  
+  body.light-mode .navbar li a:hover {
+    color: #333;
+  }
+  
+
+  body.light-mode .hero-content {
+    color: #222;
+  }
+  
+  body.light-mode .hero-overlay {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Sky Container for Light Mode */
+  #sky-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(#e0f7ff, #b3d8ff);
+    overflow: hidden;
+    z-index: -2;
+  }
+  
+  .sky-hidden {
+    display: none;
+  }
+  
+  .cloud {
+    position: absolute;
+    top: 100vh;
+    animation: moveUp 80s linear infinite;
+  }
+  
+  @keyframes moveUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-200vh);
+    }
+  }
