@@ -53,6 +53,34 @@ function loadSections() {
   );
 }
 
+function loadSwiperThenCarousel() {
+  if (typeof Swiper !== "undefined") {
+    loadCarousel();
+    return;
+  }
+
+  const swiperScript = document.createElement("script");
+  swiperScript.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+  swiperScript.onload = loadCarousel;
+  document.body.appendChild(swiperScript);
+}
+
+function loadCarousel() {
+  const script = document.createElement("script");
+  script.src = "carousel.js";
+  script.onload = () => {
+    if (typeof initializeSwiper === "function") {
+      initializeSwiper();
+    } else {
+      console.warn("⚠️ initializeSwiper() not found in carousel.js");
+    }
+  };
+  document.body.appendChild(script);
+}
+
+
+
+
 // ✅ Show main content
 function revealMainContent() {
   document.getElementById("hero").classList.add("hidden");
@@ -84,7 +112,9 @@ function revealMainContent() {
         backSpeed: 30,
         loop: true
       });
+    
     }
+    loadSwiperThenCarousel();
   });
 }
 
@@ -164,6 +194,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+
+  
 
   // ✅ Hamburger nav toggle
   document.addEventListener("click", function (e) {
