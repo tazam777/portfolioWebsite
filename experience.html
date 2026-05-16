@@ -1,20 +1,60 @@
 <section id="experience" data-aos="fade-up" data-aos-delay="300">
   <h2>Professional Experience</h2>
-
   <div class="timeline">
 
-    <!-- Experience 1: RockyTech Internship -->
+    <!-- Experience 1: Trevi Systems Inc. -->
     <div class="timeline-entry">
       <div class="timeline-dot"></div>
-
       <div class="timeline-content">
         <div class="timeline-header">
-          <h3>R&D Software Engineering Intern <span>@ RockyTech</span></h3>
+          <h3>Software Engineering Intern <span>@ Trevi Systems Inc.</span></h3>
+          <p class="timeline-date">Apr 2026 – Present</p>
+        </div>
+        <p class="timeline-sub">Desalination R&amp;D · FastAPI · Next.js · Python · ML Model Serving</p>
+        <ul class="timeline-points">
+          <li>Building full-stack internal engineering tools that support membrane R&amp;D for a forward-osmosis / reverse-osmosis hybrid desalination platform.</li>
+          <li>Developed a process-prediction API serving a trained multi-output Random Forest model (scikit-learn pipeline), exposing 11+ operational outputs (permeate flow, TDS, conductivity, energy consumption) from membrane-configuration inputs.</li>
+          <li>Built a tolerance-based historical-run matcher over experimental data: categorical strict-match plus per-column numeric tolerances, ranked top-K results with deterministic distance scoring.</li>
+          <li>Implemented a physics-based RO/FO-PRO calculator (van't Hoff osmotic pressure, hydraulic power, full salt balance, auto-detected bypass vs. no-bypass operating modes) with a FastAPI backend and Next.js frontend.</li>
+          <li>Stack: Python, FastAPI, Pydantic, scikit-learn, joblib, openpyxl, Next.js, TypeScript.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>FastAPI</span><span>Next.js</span><span>TypeScript</span><span>scikit-learn</span><span>Pydantic</span><span>Pandas</span><span>REST API</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience 2: Accessium Group Initiative -->
+    <div class="timeline-entry">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Software Development Engineer <span>@ Accessium Group Initiative</span></h3>
+          <p class="timeline-date">Sept 2025 – Mar 2026 · Remote</p>
+        </div>
+        <p class="timeline-sub">Test Automation · Python · Playwright · AWS · CI/CD · Docker</p>
+        <ul class="timeline-points">
+          <li>Designed and implemented scalable Playwright automation frameworks in Python using Page Object Model, enabling reusable UI and API test automation across Dev, Staging, and UAT environments.</li>
+          <li>Built CI/CD pipelines with GitHub Actions and Jenkins, accelerating release cycles and improving deployment confidence; developed automated result-parsing and failure-analysis utilities to identify flaky tests and root causes.</li>
+          <li>Deployed and maintained Dockerized TestLink infrastructure on AWS EC2 (IAM, VPC, SSM) for secure, centralized test management and traceability between requirements, test cases, and execution results.</li>
+          <li>Engineered real-time test monitoring and alerting using AWS SNS, reducing failure response time and improving defect visibility; managed automation logs, reports, and test artifacts in AWS S3 via boto3.</li>
+          <li>Collaborated with developers, QA engineers, and product owners in Agile/Scrum to deliver high-quality releases.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>Playwright</span><span>AWS</span><span>Docker</span><span>Jenkins</span><span>GitHub Actions</span><span>TestLink</span><span>boto3</span><span>POM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience 3: RockyTech -->
+    <div class="timeline-entry">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Research and Development Software Engineer <span>@ RockyTech</span></h3>
           <p class="timeline-date">Jan 2025 – May 2025</p>
         </div>
-
         <p class="timeline-sub">BLE-integrated systems · React Native · Embedded Systems · WordPress</p>
-
         <ul class="timeline-points">
           <li>Built BLE-integrated React Native app enabling real-time thermal regulation in prosthetics using ESP32 and dual-mode (manual/automated).</li>
           <li>Implemented background scanning, dynamic thresholding, Notifee push notifications, and OTA safety controls.</li>
@@ -22,25 +62,21 @@
           <li>Deployed iOS builds via TestFlight and documented firmware bundling, architecture, and patent workflow.</li>
           <li>Modernized company WordPress site using Elementor with responsive layout optimizations.</li>
         </ul>
-
         <div class="tags">
           <span>React Native</span><span>BLE</span><span>ESP32</span><span>Notifee</span><span>WordPress</span>
         </div>
       </div>
     </div>
 
-    <!-- Experience 2: Cybage QA Engineer -->
+    <!-- Experience 4: Cybage SDET / QA Engineer -->
     <div class="timeline-entry">
       <div class="timeline-dot"></div>
-
       <div class="timeline-content">
         <div class="timeline-header">
           <h3>QA Engineer <span>@ Cybage Software</span></h3>
           <p class="timeline-date">Nov 2020 – Aug 2023</p>
         </div>
-
         <p class="timeline-sub">Client: Amadeus (Hospitality Tech) · Automation · Agile QA · CI/CD</p>
-
         <ul class="timeline-points">
           <li>Delivered automation coverage for booking engines and third-party integrations across iHotelier, GDS, and Meta Channels.</li>
           <li>Built Selenium (Java) frameworks and API test suites with Postman, ReadyAPI, and SoapUI (80% regression automation).</li>
@@ -48,7 +84,6 @@
           <li>Mentored 5-member team, led internal QA sessions, and represented QA in client syncs and releases.</li>
           <li>Cut production defects by 95% via Jenkins quality gates and Git-integrated automation pipelines.</li>
         </ul>
-
         <div class="tags">
           <span>Java</span><span>Selenium</span><span>Postman</span><span>ReadyAPI</span><span>JIRA</span><span>Agile</span><span>Jenkins</span>
         </div>
