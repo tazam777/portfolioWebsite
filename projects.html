@@ -1,88 +1,83 @@
-<!-- project.html -->
 <section id="projects" data-aos="fade-up" data-aos-delay="400">
   <h2>Projects</h2>
-
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
 
-      <!-- Slide 1 -->
+      <!-- Slide 1: GenTestPilot-Lite -->
       <div class="swiper-slide">
         <div class="project-card">
-          <h3>📌 Featured Project</h3>
-          <strong>GenTestPilot-Lite – AI-Powered Login Test Generator</strong>
-          <p>A lightweight Java tool that transforms natural language login prompts into executable browser tests using <strong>OpenAI GPT</strong> and <strong>Selenium</strong>.</p>
-          <ul>
-            <li>GPT parses English prompts into structured test input</li>
-            <li>Java 17 + Selenium WebDriver + Maven CLI</li>
-            <li>Implements POM design for modular test automation</li>
-            <li>CLI-triggered tests for positive and negative logins</li>
-            <li>Saves logs, screenshots, and supports easy extension</li>
-          </ul>
-          <a href="https://github.com/tazam777/GenTestPilot" target="_blank">View on GitHub</a>
+          <strong>GenTestPilot-Lite</strong>
+          <p class="project-tagline">Prompt-to-Test CLI Tool</p>
+          <p>Converts natural-language test prompts into executable Selenium scripts. Generates POM-based automation code with reusable components, screenshot logging, and CI-ready execution. Integrated with Maven and GitHub Actions.</p>
           <div class="tags">
-            <span>Java</span><span>GPT</span><span>Selenium</span><span>Maven</span><span>POM</span>
+            <span>Python</span><span>OpenAI</span><span>Selenium</span><span>Maven</span><span>POM</span>
+          </div>
+          <a class="project-link" href="https://github.com/tazam777/GenTestPilot" target="_blank" rel="noopener">View Code →</a>
+        </div>
+      </div>
+
+      <!-- Slide 2: RESTler Swagger Auto-Generator -->
+      <div class="swiper-slide">
+        <div class="project-card">
+          <strong>RESTler Swagger Auto-Generator</strong>
+          <p class="project-tagline">LLM-Powered API Documentation</p>
+          <p>Converts undocumented API logs into machine-generated Swagger specifications for fuzz testing. Generated validated Swagger definitions for 50+ legacy endpoints, integrated with RESTler workflows for automated API fuzz testing and vulnerability detection.</p>
+          <div class="tags">
+            <span>Python</span><span>LLaMA 3</span><span>RESTler</span><span>Swagger</span>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="project-card">
-          <strong>RESTler Enhancement for Swagger Generation</strong>
-          <p>LLM-powered automation of undocumented REST API schemas using LLaMA 3 — reduced manual documentation time by 70%.</p>
-          <div class="tags">
-            <span>LLM</span><span>RESTler</span><span>Swagger</span><span>LLaMA 3</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
+      <!-- Slide 3: Voice-to-Face Reconstruction -->
       <div class="swiper-slide">
         <div class="project-card">
           <strong>Voice-to-Face AI Reconstruction</strong>
-          <p>Deep learning system using CNN-RNN architecture to generate facial features from voice spectrograms with real-time inference.</p>
+          <p class="project-tagline">Deep Learning · Multimodal</p>
+          <p>Deep learning system using a CNN-RNN architecture to generate facial features from voice spectrograms with real-time inference. Explores cross-modal representation learning between audio and visual domains.</p>
           <div class="tags">
             <span>Deep Learning</span><span>CNN</span><span>RNN</span><span>Python</span>
           </div>
         </div>
       </div>
 
-      <!-- Slide 4 -->
+      <!-- Slide 4: Sleep Quality Prediction -->
       <div class="swiper-slide">
         <div class="project-card">
           <strong>Sleep Quality Prediction System</strong>
-          <p>Full-stack ML web app that predicts sleep quality from user inputs via a React UI, powered by a Python REST backend and model.</p>
+          <p class="project-tagline">Full-Stack ML Web App</p>
+          <p>End-to-end ML application predicting sleep quality from user inputs. React frontend, Python REST backend serving a trained model, with input validation and real-time inference.</p>
           <div class="tags">
-            <span>Machine Learning</span><span>React</span><span>REST API</span><span>Python</span>
+            <span>Machine Learning</span><span>React</span><span>Python</span><span>REST API</span>
           </div>
         </div>
       </div>
 
-      <!-- Slide 5 -->
+      <!-- Slide 5: Video to MP3 Converter -->
       <div class="swiper-slide">
         <div class="project-card">
           <strong>Video to MP3 Converter</strong>
-          <p>Microservices-based Flask app with secure JWT auth, async tasks via RabbitMQ, NoSQL storage, and K8s deployment.</p>
+          <p class="project-tagline">Microservices Architecture</p>
+          <p>Microservices-based Flask application with JWT authentication, asynchronous task processing via RabbitMQ, MongoDB storage, and Kubernetes deployment. Demonstrates production-grade service decomposition.</p>
           <div class="tags">
-            <span>Flask</span><span>JWT</span><span>MongoDB</span><span>Kubernetes</span>
+            <span>Flask</span><span>JWT</span><span>RabbitMQ</span><span>MongoDB</span><span>Kubernetes</span>
           </div>
         </div>
       </div>
 
-      <!-- Slide 6 -->
+      <!-- Slide 6: Agro CO2 Analysis -->
       <div class="swiper-slide">
         <div class="project-card">
           <strong>Agro CO₂ Emissions Analysis</strong>
-          <p>Data engineering project visualizing agriculture-driven CO₂ patterns in North America using Snakemake and Seaborn.</p>
+          <p class="project-tagline">Data Engineering · Visualization</p>
+          <p>Data engineering pipeline visualizing agriculture-driven CO₂ patterns across North America. Built reproducible workflows with Snakemake and produced analytical visualizations with Seaborn.</p>
           <div class="tags">
-            <span>Python</span><span>Seaborn</span><span>Snakemake</span><span>Data Viz</span>
+            <span>Python</span><span>Snakemake</span><span>Seaborn</span><span>Data Viz</span>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- Swiper Controls -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
