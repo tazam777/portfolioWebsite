@@ -2,7 +2,6 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./layout.css');
-
 /* === Components === */
 @import url('./components/animations.css');
 @import url('./components/hero.css');
@@ -15,10 +14,9 @@
 /* === Themes === */
 @import url('./themes/dark.css');
 @import url('./themes/light.css');
-
 /* === Responsive === */
 @import url('./responsive.css');
-
-
-
 @import url('./timeline.css');
+
+/* === Modern override layer — MUST BE LAST === */
+@import url('./modern.css');

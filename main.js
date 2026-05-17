@@ -1,13 +1,11 @@
 const includes = [
-  { id: "header-section", file: "header.html" },
   { id: "about-section", file: "about.html" },
   { id: "experience-section", file: "experience.html" },
+  { id: "skills-section", file: "skills.html" },
   { id: "projects-section", file: "projects.html" },
-  { id: "certifications-section", file: "certifications.html" },
-  { id: "patents-section", file: "patents.html" },
+  { id: "credentials-section", file: "credentials.html" },
   { id: "contact-section", file: "contact.html" }
 ];
-
 // ✅ Generate moving clouds
 function generateClouds(num = 6) {
   const sky = document.getElementById("sky-container");
@@ -102,11 +100,9 @@ function revealMainContent() {
     if (typedTarget && window.Typed) {
       new Typed(typedTarget, {
         strings: [
-          "Software Engineer",
-          "SDET",
-          "React Native Developer",
-          "BLE + Embedded Systems Enthusiast",
-          "AI Enthusiast"
+          "Software Development Engineer",
+          "Test Automation & CI/CD",
+          "Cloud Infrastructure on AWS"
         ],
         typeSpeed: 60,
         backSpeed: 30,
