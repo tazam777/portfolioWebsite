@@ -1,34 +1,100 @@
-<div class="centered-contact" id="contact">
-  <div class="contact-card">
-    <img
-      id="cat-mode-img"
-      class="contact-cat"
-      src="assets/white-cat.png"
-      alt="cat"
-      loading="lazy"
-    />
+<section id="contact" class="contact-section" data-aos="fade-up">
+  <div class="contact-card-modern">
 
-    <h2>Contact</h2>
-    <hr />
-
-    <div class="contact-grid">
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:tariquemulla14@gmail.com">tariquemulla14@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <a href="tel:+13035223696">+1 (303) 522-3696</a>
-      </div>
-      <div class="contact-item">
-        <i class="fab fa-linkedin"></i>
-        <a href="https://linkedin.com/in/tarique-anwar-mulla" target="_blank">LinkedIn</a>
-      </div>
-      <div class="contact-item">
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/tazam777" target="_blank">GitHub</a>
+    <!-- Header: avatar + identity -->
+    <div class="contact-header">
+      <div class="contact-avatar" aria-hidden="true">TM</div>
+      <div class="contact-identity">
+        <h2>Let's connect</h2>
+        <p class="contact-tagline">
+          Software Development Engineer · Boulder, CO
+        </p>
+        <div class="contact-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to new opportunities
+        </div>
       </div>
     </div>
 
+    <p class="contact-intro">
+      Whether you're hiring, collaborating, or just want to chat about test
+      automation, AI, or cloud infrastructure — I'd love to hear from you.
+    </p>
+
+    <!-- Primary CTAs -->
+    <div class="contact-cta-row">
+      <a class="contact-btn-primary" href="mailto:tariquemulla14@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Send email
+      </a>
+      <a class="contact-btn-secondary" href="assets/Tarique_Anwar_Mulla.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download resume
+      </a>
+    </div>
+
+    <div class="contact-divider"></div>
+
+    <!-- Contact channels grid -->
+    <div class="contact-channels">
+
+      <a class="contact-channel" href="mailto:tariquemulla14@gmail.com" aria-label="Email">
+        <div class="channel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="channel-text">
+          <span class="channel-label">Email</span>
+          <span class="channel-value">tariquemulla14@gmail.com</span>
+        </div>
+      </a>
+
+      <a class="contact-channel" href="tel:+13035223696" aria-label="Phone">
+        <div class="channel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="channel-text">
+          <span class="channel-label">Phone</span>
+          <span class="channel-value">+1 (303) 522-3696</span>
+        </div>
+      </a>
+
+      <a class="contact-channel" href="https://linkedin.com/in/tarique-anwar-mulla" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <div class="channel-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+          </svg>
+        </div>
+        <div class="channel-text">
+          <span class="channel-label">LinkedIn</span>
+          <span class="channel-value">tarique-anwar-mulla</span>
+        </div>
+      </a>
+
+      <a class="contact-channel" href="https://github.com/tazam777" target="_blank" rel="noopener" aria-label="GitHub">
+        <div class="channel-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.07.78 2.15v3.18c0 .3.21.67.8.55 4.57-1.52 7.86-5.83 7.86-10.91C23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+        </div>
+        <div class="channel-text">
+          <span class="channel-label">GitHub</span>
+          <span class="channel-value">@tazam777</span>
+        </div>
+      </a>
+
+    </div>
+
   </div>
-</div>
+</section>

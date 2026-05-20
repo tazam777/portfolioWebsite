@@ -137,10 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      const catImg = document.getElementById("cat-mode-img");
-      if (catImg) {
-        catImg.src = isLight ? "assets/black-cat.png" : "assets/white-cat.png";
-      }
     });
   }
 
@@ -162,13 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSections().then(() => {
     contentLoaded = true;
     tryRevealContent();
-
-    // ✅ Update cat image AFTER contact section is loaded
-    const catImg = document.getElementById("cat-mode-img");
-    if (catImg) {
-      const isLight = document.body.classList.contains("light-mode");
-      catImg.src = isLight ? "assets/black-cat.png" : "assets/white-cat.png";
-    }
   });
 
   // Scroll to trigger
@@ -202,4 +191,43 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.toggle("active");
     }
   });
+
+  // ✅ Scroll spy: highlight the active nav link based on which section is in view
+  function initScrollSpy() {
+    const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+    if (!navLinks.length) return;
+
+    const sections = Array.from(navLinks)
+      .map(link => {
+        const id = link.getAttribute("href").slice(1);
+        const el = document.getElementById(id);
+        return el ? { link, el } : null;
+      })
+      .filter(Boolean);
+
+    if (!sections.length) return;
+
+    function updateActive() {
+      // Pick the section whose top is closest to (but not below) ~120px from viewport top
+      const scrollY = window.scrollY + 140;
+      let current = sections[0];
+      for (const s of sections) {
+        if (s.el.offsetTop <= scrollY) current = s;
+      }
+      navLinks.forEach(a => a.classList.remove("active"));
+      if (current) current.link.classList.add("active");
+    }
+
+    window.addEventListener("scroll", updateActive, { passive: true });
+    updateActive();
+  }
+
+  // Run scroll spy AFTER sections have been loaded into DOM
+  const spyObserver = new MutationObserver(() => {
+    if (document.querySelector("#about-section > section, #experience-section > section")) {
+      initScrollSpy();
+      spyObserver.disconnect();
+    }
+  });
+  spyObserver.observe(document.body, { childList: true, subtree: true });
 });
