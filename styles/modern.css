@@ -205,6 +205,73 @@
   .skill-chips span:nth-child(8) { animation-delay: 0.40s; }
   .skill-chips span:nth-child(n+9) { animation-delay: 0.45s; }
   
+  /* ---------- Spoken-language chips ---------- */
+  .lang-chips .lang-chip {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    background: rgba(125, 211, 252, 0.06) !important;
+    border: 1px solid rgba(125, 211, 252, 0.25) !important;
+    color: var(--text-primary) !important;
+    padding: 6px 6px 6px 12px !important;
+    border-radius: 999px !important;
+    font-size: 0.88em !important;
+  }
+
+  .lang-chips .lang-chip:hover {
+    background: rgba(125, 211, 252, 0.12) !important;
+    border-color: var(--accent) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .lang-chips .lang-chip > span {
+    /* Reset the outer .skill-chips span rules for nested spans */
+    display: inline !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    color: inherit !important;
+    animation: none !important;
+    opacity: 1 !important;
+    font-size: inherit !important;
+  }
+
+  .lang-chips .lang-chip:hover > span {
+    transform: none !important;
+  }
+
+  .lang-chips .lang-flag {
+    font-size: 1.1em !important;
+    line-height: 1;
+  }
+
+  .lang-chips .lang-name {
+    font-weight: 500;
+  }
+
+  .lang-chips .lang-level {
+    background: rgba(56, 189, 248, 0.15) !important;
+    border: 1px solid rgba(125, 211, 252, 0.35) !important;
+    color: var(--accent) !important;
+    font-size: 0.78em !important;
+    padding: 2px 9px !important;
+    border-radius: 999px !important;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  body.light-mode .lang-chips .lang-chip {
+    background: rgba(56, 189, 248, 0.08) !important;
+    border-color: rgba(56, 189, 248, 0.3) !important;
+  }
+
+  body.light-mode .lang-chips .lang-level {
+    background: rgba(56, 189, 248, 0.12) !important;
+    color: #0369a1 !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+  }
+  
   @keyframes chipFadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -778,25 +845,29 @@
   .nav-resume-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-    color: #0a0a0a !important;
-    font-weight: 600;
-    font-size: 0.88em;
-    padding: 8px 16px;
+    gap: 7px;
+    background: rgba(125, 211, 252, 0.08);
+    border: 1px solid rgba(125, 211, 252, 0.35);
+    color: var(--accent) !important;
+    font-weight: 500;
+    font-size: 0.85em;
+    padding: 7px 14px;
     border-radius: 8px;
     text-decoration: none !important;
     white-space: nowrap;
     flex-shrink: 0;
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.25s ease,
+                border-color 0.25s ease,
                 box-shadow 0.25s ease;
-    box-shadow: 0 2px 12px var(--accent-glow);
   }
   
   .nav-resume-btn:hover {
     transform: translateY(-1px);
-    color: #0a0a0a !important;
-    box-shadow: 0 6px 20px rgba(125, 211, 252, 0.4);
+    background: rgba(125, 211, 252, 0.15);
+    border-color: var(--accent);
+    color: var(--accent) !important;
+    box-shadow: 0 4px 16px rgba(125, 211, 252, 0.2);
     text-decoration: none !important;
   }
   
@@ -806,21 +877,102 @@
     flex-shrink: 0;
   }
   
-  /* Hamburger spacer when visible (mobile) */
-  .navbar .hamburger {
-    flex-shrink: 0;
-  }
-  
-  /* Light mode */
+  /* Light mode resume button */
   body.light-mode .nav-resume-btn {
-    background: linear-gradient(135deg, var(--light-accent), var(--light-accent-strong));
-    color: #ffffff !important;
-    box-shadow: 0 2px 12px var(--light-accent-glow);
+    background: rgba(2, 132, 199, 0.08);
+    border-color: rgba(2, 132, 199, 0.4);
+    color: var(--light-accent) !important;
+    box-shadow: none;
   }
   
   body.light-mode .nav-resume-btn:hover {
+    background: rgba(2, 132, 199, 0.15);
+    border-color: var(--light-accent);
+    color: var(--light-accent) !important;
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.2);
+  }
+
+  /* =========================================================
+   NAV MONOGRAM (left-side TM logo)
+   ========================================================= */
+  .nav-monogram {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #2563eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78em;
+    font-weight: 600;
     color: #ffffff !important;
-    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+    letter-spacing: -0.02em;
+    text-decoration: none !important;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3),
+                inset 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.25s ease;
+  }
+  
+  .nav-monogram:hover {
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45),
+                inset 0 -1px 4px rgba(0, 0, 0, 0.15);
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+  
+  body.light-mode .nav-monogram {
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3),
+                inset 0 -1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* =========================================================
+   ACTIVE NAV LINK INDICATOR (animated underline)
+   ========================================================= */
+  .navbar .nav-links li a {
+    position: relative;
+    padding: 6px 12px !important;
+    transition: color 0.25s ease;
+  }
+  
+  .navbar .nav-links li a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+    border-radius: 1px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .navbar .nav-links li a:hover::after,
+  .navbar .nav-links li a.active::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar .nav-links li a.active {
+    color: var(--accent) !important;
+    font-weight: 500;
+  }
+  
+  body.light-mode .navbar .nav-links li a.active {
+    color: var(--light-accent) !important;
+  }
+  
+  body.light-mode .navbar .nav-links li a::after {
+    background: linear-gradient(90deg, var(--light-accent), var(--light-accent-strong));
+  }
+  
+  /* Hamburger spacer when visible (mobile) */
+  .navbar .hamburger {
+    flex-shrink: 0;
   }
   
   /* Mobile: keep button visible on the right, links collapse into hamburger menu */
@@ -850,15 +1002,18 @@
       content: "Resume";
     }
   
-    /* Reorder: hamburger on left, button on right, links drop down between */
-    .navbar .hamburger {
+    /* Reorder: monogram + hamburger on left, button on right, links drop down between */
+    .navbar .nav-monogram {
       order: 0;
     }
+    .navbar .hamburger {
+      order: 1;
+    }
     .navbar .nav-links {
-      order: 2;
+      order: 3;
       flex-basis: 100%;
     }
     .nav-resume-btn {
-      order: 1;
+      order: 2;
     }
   }
